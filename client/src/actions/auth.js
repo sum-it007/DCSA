@@ -8,11 +8,12 @@ import {
   AUTH_ERROR,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  LOGOUT,
 } from './types';
 import setAuthToken from '../utils/setauthtken';
 
 // LOAD user
-export const loaduser = () => async (dispatch) => {
+export const loadUser = () => async (dispatch) => {
   if (localStorage.token) {
     setAuthToken(localStorage.token);
   }
@@ -34,7 +35,7 @@ export const loaduser = () => async (dispatch) => {
 export const register = ({ name, email, password }) => async (dispatch) => {
   const config = {
     headers: {
-      'Content-Type': 'application/jsin',
+      'Content-Type': 'application/json',
     },
   };
 
@@ -48,7 +49,7 @@ export const register = ({ name, email, password }) => async (dispatch) => {
       payload: res.data,
     });
 
-    dispatch(loaduser());
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -62,12 +63,11 @@ export const register = ({ name, email, password }) => async (dispatch) => {
   }
 };
 
-//login USER
-
+//Login User
 export const login = (email, password) => async (dispatch) => {
   const config = {
     headers: {
-      'Content-Type': 'application/jsin',
+      'Content-Type': 'application/json',
     },
   };
 
@@ -81,7 +81,7 @@ export const login = (email, password) => async (dispatch) => {
       payload: res.data,
     });
 
-    dispatch(loaduser());
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -93,4 +93,9 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_FAIL,
     });
   }
+};
+
+//LOGOUT
+export const logout = () => (dispatch) => {
+  dispatch({ type: LOGOUT });
 };
