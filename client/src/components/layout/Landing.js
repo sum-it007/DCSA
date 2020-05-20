@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 export const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -16,10 +16,10 @@ export const Landing = ({ isAuthenticated }) => {
             Department of Computer Science and Application (DCSA)
           </p>
           <div className="buttons">
-            <a href="register.html" className="btn btn-primary">
+            <Link to="/register" className="btn btn-primary">
               Sign Up
-            </a>
-            <a href="login.html" className="btn btn-light">
+            </Link>
+            <a href="/login" className="btn btn-light">
               Login
             </a>
           </div>
