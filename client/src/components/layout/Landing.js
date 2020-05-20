@@ -19,9 +19,9 @@ export const Landing = ({ isAuthenticated }) => {
             <Link to="/register" className="btn btn-primary">
               Sign Up
             </Link>
-            <a href="/login" className="btn btn-light">
+            <Link to="/login" className="btn btn-light">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
