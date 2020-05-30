@@ -13,11 +13,15 @@
   padding: 0;
 }
 
+.border {
+  border: 1px solid greenyellow;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: black;
   color: #333;
 }
 
@@ -70,10 +74,17 @@ img {
   color: var(--primary-color);
 }
 
+.text-white {
+  color: white;
+}
+
 .text-dark {
   color: var(--dark-color);
 }
 
+.text-green {
+  color: greenyellow;
+}
 /* Padding */
 .p {
   padding: 0.5rem;
@@ -162,6 +173,17 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+
+.btn-green,
+.bg-green {
+  background: greenyellow;
+  color: black;
+}
+
+.txt-area-color {
+  background-color: black;
+  color: white;
 }
 
 .btn-light,
@@ -308,7 +330,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  border-bottom: solid 1px white;
   opacity: 0.9;
 }
 
@@ -317,7 +339,7 @@ button {
 }
 
 .navbar a {
-  color: #fff;
+  color: greenyellow;
   padding: 0.45rem;
   margin: 0 0.25rem;
 }

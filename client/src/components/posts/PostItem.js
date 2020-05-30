@@ -13,15 +13,15 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   showActions,
 }) => (
-  <div class="post bg-white p-1 my-1">
+  <div class="post bg-black border p-1 my-1">
     <div>
       <Link to={`/profile/${user}`}>
         <img class="round-img" src={avatar} alt="" />
-        <h4>{name}</h4>
+        <h4 className="text-green">{name}</h4>
       </Link>
     </div>
     <div>
-      <p class="my-1">{text}</p>
+      <p class="my-1 text-white">{text}</p>
       <p class="post-date">
         Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
       </p>
@@ -30,17 +30,17 @@ const PostItem = ({
           <button
             onClick={(e) => addLike(_id)}
             type="button"
-            class="btn btn-light">
+            class="btn btn-green">
             <i class="fas fa-thumbs-up"></i>{' '}
             <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
           </button>
           <button
             onClick={(e) => removeLike(_id)}
             type="button"
-            class="btn btn-light">
+            class="btn btn-green">
             <i class="fas fa-thumbs-down"></i>
           </button>
-          <Link to={`/posts/${_id}`} class="btn btn-primary">
+          <Link to={`/posts/${_id}`} class="btn btn-green">
             Discussion{' '}
             {comments.length > 0 && (
               <span class="comment-count">{comments.length}</span>

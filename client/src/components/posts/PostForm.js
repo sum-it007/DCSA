@@ -7,7 +7,7 @@ const PostForm = ({ addPost }) => {
   const [text, setText] = useState('');
   return (
     <div class="post-form">
-      <div class="bg-primary p">
+      <div class="bg-green p">
         <h3>Say Something...</h3>
       </div>
       <form
@@ -19,13 +19,14 @@ const PostForm = ({ addPost }) => {
         }}>
         <textarea
           name="text"
+          className="txt-area-color border"
           cols="30"
           rows="5"
           placeholder="Create a post"
           value={text}
           onChange={(e) => setText(e.target.value)}
           required></textarea>
-        <input type="submit" class="btn btn-dark my-1" value="Submit" />
+        <input type="submit" class="btn btn-green my-1" value="Submit" />
       </form>
     </div>
   );

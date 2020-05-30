@@ -24,12 +24,12 @@ const Login = ({ login, isAuthenticated }) => {
 
   //Redirect if logged in
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/profiles" />;
   }
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign In</h1>
+      <h1 className="large text-green">Sign In</h1>
       <p className="lead">
         <i className="fas fa-user-graduate"></i> Sign into Your Account
       </p>
@@ -55,10 +55,13 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
 
-        <input type="submit" className="btn btn-primary" value="Login" />
+        <input type="submit" className="btn btn-green" value="Login" />
       </form>
       <p className="my-1">
-        Don't have an account? <Link to="/register">Sign Up</Link>
+        Don't have an account?{' '}
+        <Link to="/register" className="text-green">
+          Sign Up
+        </Link>
       </p>
     </Fragment>
   );

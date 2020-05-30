@@ -11,19 +11,19 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className="profile bg-light">
+    <div className="profile bg-black border">
       <img src={avatar} alt="" className="round-img" />
       <div>
-        <h2>{name}</h2>
+        <h2 className="text-green">{name}</h2>
         <p>{status}</p>
         <p className="my-1">{location && <span>{location}</span>}</p>
-        <Link to={`/profile/${_id}`} className="btn btn-primary">
+        <Link to={`/profile/${_id}`} className="btn btn-green">
           View Profile
         </Link>
       </div>
       <ul>
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className="text-primary">
+          <li key={index} className="text-green">
             <i className="fas fa-check"></i>
             {skill}
           </li>
