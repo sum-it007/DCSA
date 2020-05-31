@@ -46,7 +46,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <h1>
         <Link to="/">
           {' '}
-          <img src="logo.png"></img> DCSA
+          <i class="fas fa-graduation-cap"></i> DCSA
         </Link>
       </h1>
       {!loading && (
