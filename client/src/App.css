@@ -256,6 +256,11 @@ img {
   height: 100%;
 }
 
+/*Round buttons*/
+.btn-round {
+  border-radius: 30px;
+}
+
 /* Forms */
 .form .form-group {
   margin: 1.2rem 0;
@@ -388,7 +393,7 @@ button {
   grid-template-areas:
     'top top'
     'about about'
-    'exp edu'
+    'edu edu'
     'github github';
   grid-gap: 1rem;
 }

@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { addComment } from '../../actions/post';
 
 const CommentForm = ({ postId, addComment }) => {
-  const [text, setText] = useState(' ');
+  const [text, setText] = useState('');
 
   return (
     <div class="post-form">
-      <div class="bg-primary p">
+      <div class="bg-green p">
         <h3>Leave a comment</h3>
       </div>
       <form
@@ -20,13 +20,18 @@ const CommentForm = ({ postId, addComment }) => {
         }}>
         <textarea
           name="text"
+          className="txt-area-color border"
           cols="30"
           rows="5"
-          placeholder="Create a post"
+          placeholder="Your comments"
           value={text}
           onChange={(e) => setText(e.target.value)}
           required></textarea>
-        <input type="submit" class="btn btn-dark my-1" value="Submit" />
+        <input
+          type="submit"
+          class="btn btn-dark my-1 btn-round"
+          value="Submit"
+        />
       </form>
     </div>
   );

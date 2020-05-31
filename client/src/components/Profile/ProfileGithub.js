@@ -11,7 +11,10 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
 
   return (
     <div className="profile-github">
-      <h2 className="text-primary my-1">Github Repos</h2>
+      <h2 className="text-green my-1">
+        <i class="fab fa-github"></i>
+        Github Repos
+      </h2>
       {repos === null ? (
         <Spinner />
       ) : (
@@ -22,6 +25,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
                 <a
                   href={repo.html_url}
                   target="_blank"
+                  className="text-dark"
                   rel="noopener noreferrer">
                   {repo.name}
                 </a>

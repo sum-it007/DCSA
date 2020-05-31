@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../actions/profile';
@@ -32,7 +32,7 @@ const AddEducation = ({ addEducation, history }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   return (
     <Fragment>
-      <h1 class="large text-primary">Add Your Education</h1>
+      <h1 class="large text-green">Add Your Education</h1>
       <p class="lead">
         <i class="fas fa-graduation-cap"></i> Add any school, bootcamp, etc that
         you have attended
@@ -126,10 +126,10 @@ const AddEducation = ({ addEducation, history }) => {
             value={description}
             onChange={(e) => onChange(e)}></textarea>
         </div>
-        <input type="submit" class="btn btn-primary my-1" />
-        <a class="btn btn-light my-1" href="dashboard.html">
+        <input type="submit" class="btn btn-green btn-round my-1" />
+        <Link class="btn btn-light btn-round my-1" to="dashboard">
           Go Back
-        </a>
+        </Link>
       </form>
     </Fragment>
   );

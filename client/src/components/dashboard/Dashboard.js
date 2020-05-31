@@ -31,15 +31,17 @@ const Dashboard = ({
           <Education education={profile.education} />
 
           <div className="my-2">
-            <button className="btn btn-green" onClick={() => deleteAccount()}>
-              <i className="fas fa-user-minus"></i>Delete My Account
+            <button
+              className="btn btn-green btn-round"
+              onClick={() => deleteAccount()}>
+              <i className="fas fa-user-minus "></i> Delete My Account
             </button>
           </div>
         </Fragment>
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
-          <Link to="/create-profile" className="btn btn-green my-1">
+          <Link to="/create-profile" className="btn btn-green my-1 btn-round">
             Create Profile
           </Link>
         </Fragment>

@@ -44,7 +44,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Create Your Profile</h1>
+      <h1 className="large text-green">Create Your Profile</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Let's get some information to make your
         profile stand out
@@ -91,7 +91,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className="form-text">
-            City & state suggested (eg. Boston, MA)
+            City & state suggested (eg. Patiala, Ludhiana)
           </small>
         </div>
         <div className="form-group">
@@ -132,7 +132,7 @@ const CreateProfile = ({ createProfile, history }) => {
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light">
+            className="btn btn-light btn-round">
             Add Social Network Links
           </button>
           <span>Optional</span>
@@ -196,8 +196,8 @@ const CreateProfile = ({ createProfile, history }) => {
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" href="/dashboard">
+        <input type="submit" className="btn btn-green my-1 btn-round" />
+        <Link className="btn btn-light btn-round my-1" href="/dashboard">
           Go Back
         </Link>
       </form>

@@ -24,7 +24,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   //Redirect if logged in
   if (isAuthenticated) {
-    return <Redirect to="/profiles" />;
+    return <Redirect to="/posts" />;
   }
 
   return (
@@ -55,7 +55,11 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
 
-        <input type="submit" className="btn btn-green" value="Login" />
+        <input
+          type="submit"
+          className="btn btn-green btn-round"
+          value="Login"
+        />
       </form>
       <p className="my-1">
         Don't have an account?{' '}

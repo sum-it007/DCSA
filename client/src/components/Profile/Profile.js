@@ -23,21 +23,21 @@ const Profile = ({
         <Spinner />
       ) : (
         <Fragment>
-          <Link to="/profiles" className="btn btn-light">
+          <Link to="/profiles" className="btn btn-light btn-round">
             Back To Profiles
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
             auth.user._id === profile.user._id && (
-              <Link to="/edit-profile" className="btn btn-dark">
+              <Link to="/edit-profile" className="btn btn-dark btn-round">
                 Edit Profile
               </Link>
             )}
           <div class="profile-grid my-1">
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
-            <div className="profile-exp bg-white p-1">
-              <h2 className="text-primary">Education</h2>
+            <div className="profile-edu bg-white p-1">
+              <h2 className="text-green">Education</h2>
               {profile.education.length > 0 ? (
                 <Fragment>
                   {profile.education.map((education) => (

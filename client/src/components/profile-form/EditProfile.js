@@ -68,7 +68,7 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Edit Your Profile</h1>
+      <h1 className="large text-green">Edit Your Profile</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Let's get some information to make your
         profile stand out
@@ -156,7 +156,7 @@ const EditProfile = ({
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light">
+            className="btn btn-light btn-round">
             Add Social Network Links
           </button>
           <span>Optional</span>
@@ -220,8 +220,8 @@ const EditProfile = ({
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" href="/dashboard">
+        <input type="submit" className="btn btn-green btn-round my-1" />
+        <Link className="btn btn-light btn-round my-1" to="dashboard">
           Go Back
         </Link>
       </form>
